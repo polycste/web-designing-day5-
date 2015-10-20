@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Spliting a number into digit</title>
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+<script src="bootstrap.min.js"></script>
+<script>
+var number = 236785314;
+output = [];
+function separate(){
+	console.log("my number is" , number);
+	number=Number(document.getElementById("input").value);
+	console.log("my number is" , number);
+if(isNaN(number)){
+	document.write ("Give input : ");
+}
+	
+if(number>0)
+{
+while (number) 
+{
+	output.push(number % 10);
+	number = Math.floor(number/10);	      
+}
+	document.getElementById("result").innerHTML=output.reverse().join('<br/>');
+
+}
+else
+{
+	document.getElementById("result").innerHTML="this is not acceptable";
+}
+}
+</script>
+</head>
+<body>
+<input type="text" id="input" placeholder="number"><br><br>
+<div id="result">Result</div><br>
+<button onClick="separate()">click me</button>
+</body>
+</html>

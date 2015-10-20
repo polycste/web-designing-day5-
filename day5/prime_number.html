@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script type="text/javascript">
+function prime()
+{
+	var a=document.getElementById('valss').value;
+	for (var i = 2; i<a; i++) 
+	{
+ 		for (var b=2; b<=i; b++) 
+ 				{
+ 					if(i==b)
+ 					{
+ 						document.write(i+"\n"+'<br/>');
+ 					}
+ 					if(i%b==0)
+ 					{
+ 						break;
+ 					}
+ 				};
+		};
+};
+
+</script>
+	</head>
+	<body>
+<FORM>
+enter the first N numbers:		
+<input type="text" name="vals" id="valss" value=""/></br>
+<input type="button" name="onc" id="btn1" value="click me!" onclick="prime()"/>
+</br></br>
+		</FORM>
+	</body>
+</html>
